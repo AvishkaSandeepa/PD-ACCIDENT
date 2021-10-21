@@ -1,1 +1,4 @@
-print(5+4)
+import pandas as pd
+df = pd.read_csv("Crash-Statistics-Victoria.csv")
+
+print(df)
