@@ -10,19 +10,19 @@ e_date = input("Enter Ending date in format of yyyy-mm-dd : ")
 s_time = input("Enter starting time in format hh.mm.ss : ")
 e_time = input("Enter ending time in format hh.mm.ss : ")
 
-k = df['PERIOD'][0]
+k = df['DATE'][0]
 
-df['PERIOD'] = pd.to_datetime(df['ACCIDENT_DATE'])
+df['DATE'] = pd.to_datetime(df['ACCIDENT_DATE'])
 
-filt = (df['PERIOD'] >= pd.to_datetime(s_date)) & (df['PERIOD'] < pd.to_datetime(e_date))
+filt = (df['DATE'] >= pd.to_datetime(s_date)) & (df['DATE'] < pd.to_datetime(e_date))
 df = df.loc[filt]
 filt = (df['ACCIDENT_TIME'] >=s_time) & (df['ACCIDENT_TIME'] < e_time)
-print(df.loc[filt])
+df.loc[filt]
 
 #pd.to_timedelta(10.00, unit="h")
 
-
-################################
+new_df = df.drop(columns='ACCIDENT_DATE' , axis=1)
+new_df.to_html('C:\\Users\\Avishka Sandeepa\\OneDrive - University of Moratuwa\\GitHub\\PD-ACCIDENT\\my.html')
 
 no_of_injured_person = df['INJ_OR_FATAL']
 
