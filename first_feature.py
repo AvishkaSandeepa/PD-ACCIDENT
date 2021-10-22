@@ -3,8 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def data_show():
-    # read the input .csv file for processing purposes............................
-    df = pd.read_csv("Crash-Statistics-Victoria.csv",usecols=[5,6,7,8,9,13,17,28])
+    # read the input .csv file for processing purposes..you can choose columns as you wish............................
+    df = pd.read_csv("CrashStatisticsVictoria.csv", usecols=[4,5,6,7,8,11,15,26])
 
     # take the input form user for filterout the given period.....................
 
@@ -20,6 +20,10 @@ def data_show():
 
 
     # filter out the selected range of dates......................................
+    '''
+    this takes upto end date. does not take end date.
+    If you want to consider end date too.. simply change the '<' symbol with '<="
+    '''
     filt = (df['DATE'] >= pd.to_datetime(s_date)) & (df['DATE'] < pd.to_datetime(e_date))
     # update the dataframe according to filtered dates............................
     df = df.loc[filt] 
@@ -27,7 +31,7 @@ def data_show():
     # filter out the selected range of time......................................
     filt = (df['ACCIDENT_TIME'] >=s_time) & (df['ACCIDENT_TIME'] < e_time)
     # update the dataframe according to filtered dates............................
-    df.loc[filt]
+    df = df.loc[filt]
 
 
     # remove the duplicate column................................................
