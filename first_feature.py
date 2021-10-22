@@ -29,6 +29,7 @@ def data_show():
     # update the dataframe according to filtered dates............................
     df.loc[filt]
 
+
     # remove the duplicate column................................................
     new_df = df.drop(columns='ACCIDENT_DATE' , axis=1)
     

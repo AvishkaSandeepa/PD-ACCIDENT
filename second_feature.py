@@ -80,4 +80,11 @@ def accident_avg():
     plt.show()
 
 
+'''
+
+you have to call this function and give the inputs in correct(asked) order
+
+
+'''
+
 accident_avg()
