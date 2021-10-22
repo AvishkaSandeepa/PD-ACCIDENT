@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 def data_show():
     # read the input .csv file for processing purposes............................
-    df = pd.read_csv("Crash-Statistics-Victoria.csv",usecols=[4,5,6,7,8,12,16,27])
+    df = pd.read_csv("Crash-Statistics-Victoria.csv",usecols=[5,6,7,8,9,13,17,28])
 
     # take the input form user for filterout the given period.....................
 
