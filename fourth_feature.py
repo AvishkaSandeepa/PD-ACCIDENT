@@ -52,6 +52,8 @@ def analysis_of_alcoholic_effect():
 
     else:
         print("Invalid input. Please check the user manual")
+
+# call the function       
 analysis_of_alcoholic_effect()
 
 '''
