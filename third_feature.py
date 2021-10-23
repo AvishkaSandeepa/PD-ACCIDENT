@@ -47,7 +47,7 @@ def data_show():
 
     # view the resultant data table from this html page..........................
     new_df.to_html(
-        'C:\\Users\\Avishka Sandeepa\\OneDrive - University of Moratuwa\\GitHub\\PD-ACCIDENT\\results_for_keyword.html')
+        'C:\\Users\\Documents\\results_for_keyword.html')
 
 '''
 you have to call this function and give the inputs in correct(asked) order

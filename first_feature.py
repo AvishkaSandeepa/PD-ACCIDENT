@@ -39,7 +39,7 @@ def data_show():
     
 
     # view the resultant data table from this html page..........................
-    new_df.to_html('C:\\Users\\Avishka Sandeepa\\OneDrive - University of Moratuwa\\GitHub\\PD-ACCIDENT\\accident_results_over_period.html')
+    new_df.to_html('C:\\Users\\Documents\\accident_results_over_period.html')
 
 
 
